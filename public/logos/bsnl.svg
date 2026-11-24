@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="BSNL">
+  <circle cx="48" cy="48" r="45" fill="#FFFFFF" stroke="#DBEAFE" stroke-width="2"/>
+  <circle cx="48" cy="36" r="18" fill="none" stroke="#0054A6" stroke-width="3.5"/>
+  <path d="M30 36h36M48 18c-6 5-6 31 0 36M48 18c6 5 6 31 0 36" fill="none" stroke="#0054A6" stroke-width="2.2"/>
+  <path d="M26 42l12-8v5h20v-5l12 8-12 8v-5H38v5l-12-8z" fill="#E31E24"/>
+  <text x="48" y="75" text-anchor="middle" fill="#0054A6" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="18" letter-spacing="0.8">BSNL</text>
+</svg>
