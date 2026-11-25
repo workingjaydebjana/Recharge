@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { formatINR } from '@/lib/finance.js';
 
 export function formatDateTime(iso) {
@@ -21,12 +22,19 @@ export function formatDateTime(iso) {
 
 export function BrandLogo({ compact = false, platformName = 'Quick Recharge' }) {
   return (
-    <span className="inline-flex items-center gap-1.5 sm:gap-2 whitespace-nowrap shrink-0 select-none">
-      <span className="inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl navy-surface text-white shadow-sm shrink-0">
-        <i className="fa-solid fa-bolt text-xs sm:text-sm text-[#C4B5FD]" aria-hidden="true" />
+    <span className="inline-flex items-center gap-2 whitespace-nowrap shrink-0 select-none my-auto">
+      <span className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl overflow-hidden bg-white shadow-xs border border-[#EAE7F5] shrink-0 flex items-center justify-center my-auto">
+        <Image
+          src="/logo.png"
+          alt={platformName}
+          width={40}
+          height={40}
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover"
+        />
       </span>
       {!compact && (
-        <span className="font-display text-[15px] sm:text-lg font-bold tracking-tight text-[#0E163B] leading-none">
+        <span className="font-display text-[15px] sm:text-lg font-bold tracking-tight text-[#0E163B] leading-none my-auto">
           {platformName}
         </span>
       )}

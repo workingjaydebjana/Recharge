@@ -605,19 +605,19 @@ export default function PortalShell({ children }) {
 
         {/* Compact, Non-Overflowing Top Navigation Bar */}
         <header className="sticky top-0 z-30 h-14 sm:h-16 bg-white/95 backdrop-blur border-b border-[#EAE7F5] px-2.5 sm:px-6 flex items-center justify-between gap-2">
-          <div className="flex items-center gap-1.5 sm:gap-3 min-w-0">
+          <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 my-auto">
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
               aria-label="Open navigation menu"
-              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-[#EAE7F5] flex items-center justify-center text-[#0E163B] hover:bg-[#F5F3FF] cursor-pointer shrink-0"
+              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-[#EAE7F5] flex items-center justify-center text-[#0E163B] hover:bg-[#F5F3FF] cursor-pointer shrink-0 my-auto"
             >
               <i className="fa-solid fa-bars text-sm" aria-hidden="true" />
             </button>
             <Link
               href="/"
               onClick={closeMenus}
-              className="min-w-0"
+              className="min-w-0 flex items-center"
               aria-label="Go to Dashboard"
             >
               <BrandLogo platformName={platformName} />
@@ -625,7 +625,7 @@ export default function PortalShell({ children }) {
           </div>
 
           {/* Right Utility Cluster: Wallet Balance + Notifications + Compact Profile */}
-          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0 my-auto">
             <Link
               href="/wallet"
               onClick={closeMenus}
@@ -768,12 +768,9 @@ export default function PortalShell({ children }) {
             <div className="lg:hidden navy-surface text-white px-4 pt-4 pb-4 shrink-0">
               <div className="flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2.5 min-w-0">
-                  <span className="w-8 h-8 rounded-xl bg-white/15 border border-white/15 flex items-center justify-center shrink-0">
-                    <i className="fa-solid fa-bolt text-[#C4B5FD] text-sm" aria-hidden="true" />
-                  </span>
-                  <span className="font-display font-bold text-base tracking-tight truncate">
-                    {platformName}
-                  </span>
+                  <Link href="/" onClick={closeMenus} className="flex items-center">
+                    <BrandLogo platformName={platformName} />
+                  </Link>
                 </div>
                 <button
                   type="button"

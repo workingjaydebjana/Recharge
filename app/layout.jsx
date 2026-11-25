@@ -1,23 +1,10 @@
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import { Plus_Jakarta_Sans, DM_Sans, JetBrains_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
-  variable: '--font-display',
-});
-
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-sans',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-mono',
 });
 
 export const metadata = {
@@ -36,8 +23,15 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${plusJakarta.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      className={inter.variable}
     >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          referrerPolicy="no-referrer"
+        />
+      </head>
       <body
         suppressHydrationWarning
         className="font-sans antialiased bg-[#F7F7FC] text-[#0E163B] selection:bg-[#5B35E5]/15 selection:text-[#0E163B]"
